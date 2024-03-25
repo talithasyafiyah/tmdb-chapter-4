@@ -1,5 +1,6 @@
 import React from "react";
+import HomePage from "./talitha/HomePage";
 
 export default function Home() {
-  return <div>Ini adalah Homepage</div>;
+  return <HomePage />;
 }
