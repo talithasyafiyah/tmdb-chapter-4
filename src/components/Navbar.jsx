@@ -9,13 +9,13 @@ function Navbar() {
         </a>
         <div className="hidden md:flex items-center gap-2">
           <div className="flex gap-4">
-            <p className="text-sm font-normal text-white cursor-pointer hover:text-primary">
-              Movie
+            <p className="text-sm font-normal text-white cursor-pointer hover:text-primary hover:font-semibold">
+              Top Movie
             </p>
-            <p className="text-sm font-normal text-white cursor-pointer hover:text-primary">
+            <p className="text-sm font-normal text-white cursor-pointer hover:text-primary hover:font-semibold">
               TV Series
             </p>
-            <p className="text-sm font-normal text-white cursor-pointer hover:text-primary">
+            <p className="text-sm font-normal text-white cursor-pointer hover:text-primary hover:font-semibold">
               People
             </p>
           </div>

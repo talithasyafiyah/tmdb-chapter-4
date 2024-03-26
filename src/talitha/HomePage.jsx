@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -63,7 +64,7 @@ function HomePage() {
       </div>
 
       {/* List Movie */}
-      <section id="movie" className="container mt-60 mb-20">
+      <section id="movie" className="container mt-60 mb-16">
         <div className="mb-4">
           <div className="flex justify-between items-center">
             <h1 className="text-lg font-bold text-white">Movie List</h1>
@@ -181,6 +182,9 @@ function HomePage() {
           )}
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
