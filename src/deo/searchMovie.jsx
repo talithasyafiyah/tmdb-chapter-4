@@ -117,7 +117,7 @@ export default function searchMovie() {
             {movies.map((movie) => (
               // card
               <div
-                className=" w-44 cursor-pointer"
+                className=" w-44 cursor-pointer hover:shadow-lg hover:rounded-xl hover:shadow-primary/50"
                 key={movie.id}
                 onClick={() => {
                   navigate("/movie-details", { state: { id: movie.id } });

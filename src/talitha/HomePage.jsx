@@ -48,12 +48,12 @@ function HomePage() {
           <img src="images/hero.gif" className="w-full h-screen object-cover" />
           <div className="absolute top-0 left-0 w-full h-screen bg-black/75 flex items-center justify-center">
             <div className="text-center px-40">
-              <p className="text-white text-3xl font-semibold mb-8">
+              <h1 className="text-white text-3xl font-semibold mb-8">
                 Welcome to Movie List
-              </p>
+              </h1>
               <a
                 href="#movie"
-                className="bg-primary rounded-full px-12 py-3 text-white font-semibold"
+                className="bg-primary rounded-full px-12 py-3 text-white font-semibold hover:bg-primary/40"
               >
                 Get Started
               </a>
@@ -145,12 +145,32 @@ function HomePage() {
                   src={`https://image.tmdb.org/t/p/w500/${e.poster_path}`}
                   alt={e.title}
                 />
-                <div className="py-3 px-2">
+                <div className="pt-3 pb-2 px-3">
                   <div className="flex flex-col justify-between">
                     <div className="min-h-8">
                       <p className="text-sm font-bold leading-tight line-clamp-2">
                         {e.title}
                       </p>
+                    </div>
+                    <div className="flex items-center gap-1 justify-between">
+                      <p className="text-sm font-normal">{e.release_date}</p>
+                      <div className="flex items-center gap-1">
+                        <div className="w-4">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 576 512"
+                          >
+                            <path
+                              fill="#FFD43B"
+                              d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+                            />
+                          </svg>
+                        </div>
+
+                        <div className="text-sm font-semibold">
+                          {e?.vote_average?.toFixed(1)}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
