@@ -1,5 +1,6 @@
 import react, { useEffect, useState } from "react";
 import axios from "axios";
+,
 export default function PeopleList() {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
