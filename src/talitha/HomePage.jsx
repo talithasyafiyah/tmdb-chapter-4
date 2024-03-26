@@ -64,10 +64,10 @@ function HomePage() {
 
       {/* List Movie */}
       <section id="movie" className="container mt-60 mb-20">
-        <div className="mb-6">
+        <div className="mb-4">
           <div className="flex justify-between items-center">
             <h1 className="text-lg font-bold text-white">Movie List</h1>
-            <div>
+            <div className="flex gap-2 items-center">
               {/* Prev Button */}
               <button
                 onClick={goToPrevPage}
@@ -76,7 +76,7 @@ function HomePage() {
                   currentPage === 1
                     ? "bg-red-300"
                     : "bg-primary hover:bg-primary/50"
-                } rounded-full px-2 py-2 text-white font-semibold mr-2`}
+                } rounded-full px-2 py-2 text-white font-semibold`}
               >
                 <svg
                   class="h-3 w-3 fill-white md:h-3.5 md:w-3.5"
@@ -87,6 +87,9 @@ function HomePage() {
                   <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
                 </svg>
               </button>
+              <p className="text-white text-center">
+                {currentPage}/{totalPages}
+              </p>
               {/* Next Button */}
               <button
                 onClick={goToNextPage}
@@ -108,7 +111,12 @@ function HomePage() {
               </button>
             </div>
           </div>
-          <div className="flex gap-2 items-center">
+          <div
+            className="flex gap-2 items-center"
+            onClick={() => {
+              navigate("/search-movie");
+            }}
+          >
             <p className="text-white font-normal text-base cursor-pointer hover:text-primary hover:font-semibold">
               Discover more movies
             </p>

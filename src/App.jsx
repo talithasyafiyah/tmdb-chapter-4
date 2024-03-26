@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home";
 import MovieDetails from "./talitha/MovieDetails";
+import SearchMovie from "./deo/searchMovie";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -12,6 +13,10 @@ export default function App() {
     {
       path: "/movie-details",
       element: <MovieDetails />,
+    },
+    {
+      path: "/search-movie",
+      element: <SearchMovie />,
     },
   ]);
 
