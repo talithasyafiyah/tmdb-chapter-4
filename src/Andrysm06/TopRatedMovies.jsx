@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { HtmlTagDescriptor } from "vite";
 const API_KEY = "86805d3f5cae4725244fe5e0f2c0bc28";
 
 const StarRating = ({ rating }) => {
