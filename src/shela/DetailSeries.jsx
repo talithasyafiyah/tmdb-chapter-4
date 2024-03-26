@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 
 const API_KEY = "cb3ac09a4bda9ad72e532e4e4a98a517";
 
-export default function DetailSeries() {
+function DetailSeries() {
   const location = useLocation();
   const [detail, setDetail] = useState(null);
 
   const detailSeries = async () => {
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/tv/${location.state.id}?language=en-US&api_key=${API_KEY}`
+        `https://api.themoviedb.org/3/tv/${location.state.id}?language=en-US&api_key=${API_KEY}`,
+        { headers: { accept: "application/json" } }
       );
       console.log("response.data ", response.data);
       setDetail(response.data);
@@ -78,3 +81,5 @@ export default function DetailSeries() {
     </div>
   );
 }
+
+export default DetailSeries;

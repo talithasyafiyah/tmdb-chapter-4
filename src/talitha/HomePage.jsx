@@ -136,7 +136,7 @@ function HomePage() {
             data.map((e) => (
               <div
                 key={e.id}
-                className="w-full cursor-pointer h-full  overflow-hidden rounded-md text-white shadow-lg hover:shadow-primary/50 hover:shadow-lg"
+                className="w-full cursor-pointer h-full overflow-hidden rounded-md text-white shadow-lg hover:shadow-primary/50 hover:shadow-lg"
                 onClick={() => {
                   navigate("/movie-details", { state: { id: e.id } });
                 }}
